@@ -6,11 +6,16 @@
 //
 
 import UIKit
+<<<<<<< Updated upstream:CarShop/CarShop/Controllers/CartViewController.swift
 protocol CartCellDelegate: AnyObject {
     func didPressDetailDisclosure()
 }
 class CartViewController: UIViewController, CartCellDelegate {
     
+=======
+
+class CarShopController: UIViewController, CellViewDelegate{
+>>>>>>> Stashed changes:CarShop/CarShop/CarShopController.swift
     func didPressDetailDisclosure() {
         print("123")
     }
@@ -24,9 +29,21 @@ class CartViewController: UIViewController, CartCellDelegate {
 
     var dataManager = CartDataManager()
     
+<<<<<<< Updated upstream:CarShop/CarShop/Controllers/CartViewController.swift
     
     override func loadView() {
         view = cartView
+=======
+    var model = CarShopModel()
+    var carsInBasket: [Car] = []
+    var cars: [Car] = []
+    var dataSource : UITableViewDiffableDataSource<TableSection,Car>?
+    
+    var basketDataSource : UITableViewDiffableDataSource<TableSection,Car>?
+        
+    @objc func toBasketAction() {
+        loadSecondView()
+>>>>>>> Stashed changes:CarShop/CarShop/CarShopController.swift
     }
     
     override func viewDidLoad() {
@@ -69,6 +86,10 @@ class CartViewController: UIViewController, CartCellDelegate {
         })
         
         updateDataSource(with: cars, animate: false)
+    }
+    
+    func didTapButton() {
+        
     }
     
     func updateDataSource(with cars: [Car], animate: Bool) {

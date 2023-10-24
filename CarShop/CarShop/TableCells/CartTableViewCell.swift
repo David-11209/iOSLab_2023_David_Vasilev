@@ -7,7 +7,13 @@
 
 import UIKit
 
+<<<<<<< Updated upstream:CarShop/CarShop/TableCells/CartTableViewCell.swift
 class CartTableViewCell: UITableViewCell {
+=======
+protocol CellViewDelegate: AnyObject {
+    func didTapButton()
+}
+>>>>>>> Stashed changes:CarShop/CarShop/CarTableViewCell.swift
 
     var carsInBasket: [Car] = []
     
@@ -38,6 +44,11 @@ class CartTableViewCell: UITableViewCell {
         return image
     }()
     
+    @objc private func buttonTapped() {
+        delegate?.didTapButton()
+    }
+    weak var delegate: CellViewDelegate?
+    
     lazy var buyButton : UIButton = {
         let action = UIAction{ _ in
             self.carsInBasket.append(self.car)
@@ -50,8 +61,13 @@ class CartTableViewCell: UITableViewCell {
         return button
     }()
     
+<<<<<<< Updated upstream:CarShop/CarShop/TableCells/CartTableViewCell.swift
     weak var delegate: CarCellDelegate?
     weak var controller: CartViewController?
+=======
+//    weak var delegate: CarCellDelegate?
+    weak var controller: CarShopController?
+>>>>>>> Stashed changes:CarShop/CarShop/CarTableViewCell.swift
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupSubviews()
@@ -75,7 +91,7 @@ class CartTableViewCell: UITableViewCell {
         carImageView.image = car.carImage
         titleLabel.text = car.name
         priceLabel.text = car.price
-        
+        buyButton.addTarget(self, action: #selector(buttonTapped), for:.touchUpInside)
         self.car = car
         
         NSLayoutConstraint.activate([
