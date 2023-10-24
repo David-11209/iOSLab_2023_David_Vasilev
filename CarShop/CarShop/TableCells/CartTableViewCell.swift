@@ -1,25 +1,22 @@
 //
-//  CarTableViewCell.swift
+//  CartTableViewCell.swift
 //  CarShop
 //
-//  Created by Давид Васильев on 10.10.2023.
+//  Created by Давид Васильев on 18.10.2023.
 //
 
 import UIKit
 
-protocol CarCellDelegate: AnyObject {
-    func didPressDetailDisclosure()
-}
+class CartTableViewCell: UITableViewCell {
 
-class CarTableViewCell: UITableViewCell {
-    
     var carsInBasket: [Car] = []
     
     static var reuseIdentifier: String {
         return String(describing: self)
     }
         
-    var car = Car(name: "", price: "", carImage: UIImage())
+    var car = Car(id: UUID().uuidString,name: "", price: "", carImage: UIImage())
+    
     lazy var titleLabel : UILabel = {
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +51,7 @@ class CarTableViewCell: UITableViewCell {
     }()
     
     weak var delegate: CarCellDelegate?
-    weak var controller: CarShopController?
+    weak var controller: CartViewController?
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupSubviews()
@@ -99,5 +96,15 @@ class CarTableViewCell: UITableViewCell {
             buyButton.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.3),
         ])
     }
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
 }

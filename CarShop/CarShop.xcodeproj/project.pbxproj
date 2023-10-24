@@ -9,33 +9,41 @@
 /* Begin PBXBuildFile section */
 		2A15BAF22AD5833400B5A8D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15BAF12AD5833400B5A8D0 /* AppDelegate.swift */; };
 		2A15BAF42AD5833400B5A8D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15BAF32AD5833400B5A8D0 /* SceneDelegate.swift */; };
-		2A15BAF62AD5833400B5A8D0 /* CarShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15BAF52AD5833400B5A8D0 /* CarShopController.swift */; };
 		2A15BAF92AD5833400B5A8D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A15BAF72AD5833400B5A8D0 /* Main.storyboard */; };
 		2A15BAFB2AD5833500B5A8D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A15BAFA2AD5833500B5A8D0 /* Assets.xcassets */; };
 		2A15BAFE2AD5833500B5A8D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A15BAFC2AD5833500B5A8D0 /* LaunchScreen.storyboard */; };
-		2A15BB062AD5834F00B5A8D0 /* CarsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15BB052AD5834F00B5A8D0 /* CarsTableView.swift */; };
-		2A15BB082AD5854D00B5A8D0 /* CarShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15BB072AD5854D00B5A8D0 /* CarShopModel.swift */; };
 		2A15BB0A2AD585E900B5A8D0 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15BB092AD585E900B5A8D0 /* Car.swift */; };
-		2A15BB0C2AD58AC500B5A8D0 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15BB0B2AD58AC500B5A8D0 /* CarTableViewCell.swift */; };
-		2A15BB0E2AD59F9700B5A8D0 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15BB0D2AD59F9700B5A8D0 /* BasketView.swift */; };
-		2A15BB102AD59FE100B5A8D0 /* CarInBasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15BB0F2AD59FE100B5A8D0 /* CarInBasketTableViewCell.swift */; };
+		2A20CC312AE003E200559480 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20CC302AE003E200559480 /* CartView.swift */; };
+		2A20CC352AE00F6B00559480 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20CC342AE00F6B00559480 /* CartViewController.swift */; };
+		2A20CC372AE0109100559480 /* CartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20CC362AE0109100559480 /* CartDataManager.swift */; };
+		2A20CC392AE013B500559480 /* ShopDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20CC382AE013B500559480 /* ShopDataManager.swift */; };
+		2A20CC3B2AE0163300559480 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20CC3A2AE0163300559480 /* ShopViewController.swift */; };
+		2A20CC3D2AE0165000559480 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20CC3C2AE0165000559480 /* ShopView.swift */; };
+		2A20CC402AE01C7100559480 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20CC3F2AE01C7100559480 /* ShopTableViewCell.swift */; };
+		2A20CC422AE01C9B00559480 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20CC412AE01C9B00559480 /* CartTableViewCell.swift */; };
+		2AF22F4F2AE7CD5A00B3B47B /* ShopSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF22F4E2AE7CD5A00B3B47B /* ShopSample.swift */; };
+		2AF22F512AE7E58200B3B47B /* CartSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF22F502AE7E58200B3B47B /* CartSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A15BAEE2AD5833400B5A8D0 /* CarShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A15BAF12AD5833400B5A8D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A15BAF32AD5833400B5A8D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2A15BAF52AD5833400B5A8D0 /* CarShopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarShopController.swift; sourceTree = "<group>"; };
 		2A15BAF82AD5833400B5A8D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A15BAFA2AD5833500B5A8D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A15BAFD2AD5833500B5A8D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A15BAFF2AD5833500B5A8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A15BB052AD5834F00B5A8D0 /* CarsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableView.swift; sourceTree = "<group>"; };
-		2A15BB072AD5854D00B5A8D0 /* CarShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarShopModel.swift; sourceTree = "<group>"; };
 		2A15BB092AD585E900B5A8D0 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
-		2A15BB0B2AD58AC500B5A8D0 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
-		2A15BB0D2AD59F9700B5A8D0 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
-		2A15BB0F2AD59FE100B5A8D0 /* CarInBasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInBasketTableViewCell.swift; sourceTree = "<group>"; };
+		2A20CC302AE003E200559480 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		2A20CC342AE00F6B00559480 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		2A20CC362AE0109100559480 /* CartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataManager.swift; sourceTree = "<group>"; };
+		2A20CC382AE013B500559480 /* ShopDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDataManager.swift; sourceTree = "<group>"; };
+		2A20CC3A2AE0163300559480 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		2A20CC3C2AE0165000559480 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		2A20CC3F2AE01C7100559480 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
+		2A20CC412AE01C9B00559480 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		2AF22F4E2AE7CD5A00B3B47B /* ShopSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopSample.swift; sourceTree = "<group>"; };
+		2AF22F502AE7E58200B3B47B /* CartSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,21 +76,65 @@
 		2A15BAF02AD5833400B5A8D0 /* CarShop */ = {
 			isa = PBXGroup;
 			children = (
+				2AF22F4D2AE7CCD700B3B47B /* Samples */,
+				2A20CC3E2AE01C2A00559480 /* TableCells */,
+				2A20CC332AE00DC000559480 /* Managers */,
+				2A20CC322AE0093400559480 /* Controllers */,
+				2A20CC2F2AE002FF00559480 /* Views */,
 				2A15BAF12AD5833400B5A8D0 /* AppDelegate.swift */,
 				2A15BAF32AD5833400B5A8D0 /* SceneDelegate.swift */,
-				2A15BAF52AD5833400B5A8D0 /* CarShopController.swift */,
-				2A15BB0D2AD59F9700B5A8D0 /* BasketView.swift */,
 				2A15BB092AD585E900B5A8D0 /* Car.swift */,
-				2A15BB072AD5854D00B5A8D0 /* CarShopModel.swift */,
-				2A15BB052AD5834F00B5A8D0 /* CarsTableView.swift */,
-				2A15BB0F2AD59FE100B5A8D0 /* CarInBasketTableViewCell.swift */,
-				2A15BB0B2AD58AC500B5A8D0 /* CarTableViewCell.swift */,
 				2A15BAF72AD5833400B5A8D0 /* Main.storyboard */,
 				2A15BAFA2AD5833500B5A8D0 /* Assets.xcassets */,
 				2A15BAFC2AD5833500B5A8D0 /* LaunchScreen.storyboard */,
 				2A15BAFF2AD5833500B5A8D0 /* Info.plist */,
 			);
 			path = CarShop;
+			sourceTree = "<group>";
+		};
+		2A20CC2F2AE002FF00559480 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A20CC302AE003E200559480 /* CartView.swift */,
+				2A20CC3C2AE0165000559480 /* ShopView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2A20CC322AE0093400559480 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A20CC342AE00F6B00559480 /* CartViewController.swift */,
+				2A20CC3A2AE0163300559480 /* ShopViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A20CC332AE00DC000559480 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2A20CC362AE0109100559480 /* CartDataManager.swift */,
+				2A20CC382AE013B500559480 /* ShopDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2A20CC3E2AE01C2A00559480 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				2A20CC3F2AE01C7100559480 /* ShopTableViewCell.swift */,
+				2A20CC412AE01C9B00559480 /* CartTableViewCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		2AF22F4D2AE7CCD700B3B47B /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				2AF22F4E2AE7CD5A00B3B47B /* ShopSample.swift */,
+				2AF22F502AE7E58200B3B47B /* CartSample.swift */,
+			);
+			path = Samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,15 +208,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A15BB102AD59FE100B5A8D0 /* CarInBasketTableViewCell.swift in Sources */,
-				2A15BB0E2AD59F9700B5A8D0 /* BasketView.swift in Sources */,
-				2A15BAF62AD5833400B5A8D0 /* CarShopController.swift in Sources */,
-				2A15BB0C2AD58AC500B5A8D0 /* CarTableViewCell.swift in Sources */,
+				2A20CC312AE003E200559480 /* CartView.swift in Sources */,
+				2A20CC3D2AE0165000559480 /* ShopView.swift in Sources */,
+				2A20CC392AE013B500559480 /* ShopDataManager.swift in Sources */,
+				2AF22F4F2AE7CD5A00B3B47B /* ShopSample.swift in Sources */,
+				2AF22F512AE7E58200B3B47B /* CartSample.swift in Sources */,
 				2A15BAF22AD5833400B5A8D0 /* AppDelegate.swift in Sources */,
+				2A20CC422AE01C9B00559480 /* CartTableViewCell.swift in Sources */,
 				2A15BB0A2AD585E900B5A8D0 /* Car.swift in Sources */,
-				2A15BB062AD5834F00B5A8D0 /* CarsTableView.swift in Sources */,
-				2A15BB082AD5854D00B5A8D0 /* CarShopModel.swift in Sources */,
+				2A20CC372AE0109100559480 /* CartDataManager.swift in Sources */,
+				2A20CC352AE00F6B00559480 /* CartViewController.swift in Sources */,
+				2A20CC3B2AE0163300559480 /* ShopViewController.swift in Sources */,
 				2A15BAF42AD5833400B5A8D0 /* SceneDelegate.swift in Sources */,
+				2A20CC402AE01C7100559480 /* ShopTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

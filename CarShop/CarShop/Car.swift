@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct Car: Hashable {
+    let id: String
     let name: String
     let price:  String
     let carImage: UIImage
