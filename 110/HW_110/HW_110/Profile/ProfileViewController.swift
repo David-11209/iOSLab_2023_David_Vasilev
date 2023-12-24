@@ -7,9 +7,10 @@ class ProfileViewController: UIViewController, UpdateProfileDataManagerDelegate 
         super.viewDidLoad()
         setUpProfileView()
         addTargetForButton()
+        dataManager.getPosts()
         ProfileDataManager.shared.delegate = self
         ProfileDataManager.shared.navigationController = navigationController
-        profileView.configUser(user: dataManager.user!)
+        profileView.configUser(user: dataManager.user ?? User())
         setButtonAction()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(stackViewTapped))
         profileView.subscribersStackView.addGestureRecognizer(tapGesture)
@@ -23,13 +24,16 @@ class ProfileViewController: UIViewController, UpdateProfileDataManagerDelegate 
     @objc func stackViewTapped() {
             let friendsViewController = FriendsViewController()
             navigationController?.pushViewController(friendsViewController, animated: true)
-        }
+    }
     func setButtonAction() {
         profileView.setSettingsButtonActionClosure { [weak self] in
             let settingsViewController = SettingsViewController()
             settingsViewController.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(settingsViewController, animated: true)
         }
+    }
+    func checkPhotos() {
+        dataManager.checkPhotos()
     }
     private func setUpProfileView() {
         profileView.collectionView.delegate = dataManager
@@ -42,12 +46,13 @@ class ProfileViewController: UIViewController, UpdateProfileDataManagerDelegate 
     func dataDidChange() {
         DispatchQueue.main.async {
             self.profileView.collectionView.reloadData()
-            self.profileView.countPublicationLabel.text = String(self.dataManager.photosProfile.count)
+            self.profileView.countPublicationLabel.text = String(self.dataManager.photos.count)
         }
     }
     @objc func syncSaveButtonTapped() {
-        let photo = Photo()
-        dataManager.syncSave(model: photo)
+        print("сохранялка")
+
+        dataManager.syncSave2()
     }
     @objc func asyncSaveButtonTapped() async {
         let photo = Photo()
@@ -56,5 +61,4 @@ class ProfileViewController: UIViewController, UpdateProfileDataManagerDelegate 
     func addTargetForButton() {
         profileView.createContentButton.addTarget(self, action: #selector(syncSaveButtonTapped), for: .touchUpInside)
     }
-
 }

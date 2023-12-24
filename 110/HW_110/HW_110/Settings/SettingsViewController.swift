@@ -29,7 +29,7 @@ class SettingsViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { _ in
                 if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
                     self?.dataManager.actionsAfterUserExitFromAccount()
-                    sceneDelegate.window?.rootViewController = AuthorizationViewController()
+                    sceneDelegate.window?.rootViewController = StartScreenViewController()
                     sceneDelegate.window?.makeKeyAndVisible()
                 }
             }))

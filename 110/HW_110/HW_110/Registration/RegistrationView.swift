@@ -5,6 +5,7 @@ class RegistrationView: UIView {
     lazy var loginTextField: UITextField = UITextField()
     lazy var passwordTextField: UITextField = UITextField()
     lazy var enterButton: UIButton = UIButton()
+    var enterButtonTapped: ((_ login: String, _ password: String, _ fullName: String) -> Void)?
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .black
@@ -40,6 +41,7 @@ class RegistrationView: UIView {
         fullNameTextField.backgroundColor = .systemGray
         fullNameTextField.isSecureTextEntry = true
         fullNameTextField.borderStyle = .roundedRect
+        fullNameTextField.isSecureTextEntry = false
         fullNameTextField.layer.cornerRadius = 8
         NSLayoutConstraint.activate([
             fullNameTextField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 100),
@@ -55,6 +57,7 @@ class RegistrationView: UIView {
         loginTextField.backgroundColor = .systemGray
         loginTextField.layer.cornerRadius = 8
         loginTextField.borderStyle = .roundedRect
+        loginTextField.isSecureTextEntry = false
         NSLayoutConstraint.activate([
             loginTextField.topAnchor.constraint(equalTo: fullNameTextField.bottomAnchor, constant: 10),
             loginTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
@@ -83,6 +86,13 @@ class RegistrationView: UIView {
         enterButton.setTitle("Зарегистрироваться", for: .normal)
         enterButton.backgroundColor = .systemGray
         enterButton.layer.cornerRadius = 4
+        enterButton.addAction(UIAction(handler: { [weak self] _  in
+                    self?.enterButtonTapped?(
+                        self?.loginTextField.text ?? "",
+                        self?.passwordTextField.text ?? "",
+                        self?.fullNameTextField.text ?? "")
+                }), for: .touchUpInside)
+
         NSLayoutConstraint.activate([
             enterButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 10),
             enterButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),

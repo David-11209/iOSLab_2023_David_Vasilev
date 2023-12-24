@@ -17,11 +17,13 @@ class SettingsDataManager: NSObject {
         exitButtonActionClosure = closure
     }
     func actionsAfterUserExitFromAccount() {
-        dataManager.removeUserFromUserDefaults()
-        dataManager.photosProfile = []
-        dataManager.photosSubscribers = []
-        dataManager.setLikedPhotosInUserDefaults()
-        FriendsDataManager.shared.clearData()
+        UserDefaults.standard.removeObject(forKey: "loggedInUser")
+        UserDefaults.standard.removeObject(forKey: "isUserLogged")
+//        dataManager.removeUserFromUserDefaults()
+//        dataManager.photosProfile = []
+//        dataManager.photosSubscribers = []
+//        dataManager.setLikedPhotosInUserDefaults()
+//        FriendsDataManager.shared.clearData()
     }
     func setData() {
         settingsData.append(("Центр аккаунтов", .accountCenter, 0, .white))

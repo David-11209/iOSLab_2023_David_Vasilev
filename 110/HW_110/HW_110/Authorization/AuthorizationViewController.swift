@@ -1,7 +1,8 @@
 import UIKit
 class AuthorizationViewController: UIViewController {
     let authorizationView = AuthorizationView()
-    private let dataManager = ProfileDataManager.shared
+    private let dataManager = AuthorizationDataManager.shared
+    private var coreDataManager = CoreDataManager.shared
     private let dataSource = DataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +30,32 @@ class AuthorizationViewController: UIViewController {
 //        } else {
 //            print("Пользователь не найден")
 //        }
+        authorizationView.enterButtonTapped = { [weak self] login, password in
+            self?.dataManager.checkUserRegistered(login: login, password: password, completion: { user in
+                     DispatchQueue.main.async {
+                         if let user {
+                             print("Авторизация прошла успешно")
+                             self?.setUpTabBar(user: user)
+//                             self?.setUpTabBar(user: user)
+//                             guard let imageData = user.avatarImage else {return}
+//                             self?.showPostsViewController(logoImage: UIImage(data: imageData) ?? UIImage.question)
+                         } else {
+                             let alert = UIAlertController(title: "Ошибка", message: "Пароль или Логин неправильные", preferredStyle: .alert)
+                             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                             self?.present(alert, animated: true, completion: nil)
+                         }
+                     }
+                 })
+             }
     }
     func setUpTabBar(user: User) {
-        FriendsDataManager.shared.setData(currentUser: user)
+//        FriendsDataManager.shared.setData(currentUser: user)
+
         let profileViewController = ProfileViewController()
-        profileViewController.dataManager.updateLikesFromUserDefaults()
-        profileViewController.dataManager.setPhotos(user: user)
+//        profileViewController.dataManager.updateLikesFromUserDefaults()
+        profileViewController.dataManager.setUser(user: user)
         let subPublicationsViewController = SubscriptionPublicationsViewController()
+        subPublicationsViewController.checkPhotos()
         let originalImage = UIImage(resource: .home2)
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 25, height: 20))
         let resizedImage = renderer.image { (_) in
@@ -58,4 +78,5 @@ class AuthorizationViewController: UIViewController {
             sceneDelegate.window?.makeKeyAndVisible()
         }
     }
+    
 }

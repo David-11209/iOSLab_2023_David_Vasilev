@@ -3,6 +3,8 @@ class SubscriptionPublicationsViewController: UIViewController {
     let subPublicationsView = SubscriptionPublicationsView()
     private let dataManager = SubscriptionPublicationsDataManager.shared
     private let storiesDataManager = StoriesDataManager.shared
+
+
     func dataDidChange() {
         DispatchQueue.main.async {
             self.subPublicationsView.mainCollectionView.reloadData()
@@ -10,9 +12,21 @@ class SubscriptionPublicationsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpPSubPublicationsView()
+        setUpSubPublicationsView()
+//        dataManager.reloadData = { [weak self] in
+//             self?.postView?.tableView.reloadData()
+//         }
+        dataManager.checkPhotos()
+        self.subPublicationsView.mainCollectionView.reloadData()
+        checkPhotos()
+//         DispatchQueue.main.async {
+//             self.postView?.tableView.scrollToRow(at: self.indexPath, at: .top, animated: false)
+//         }
     }
-    func setUpPSubPublicationsView() {
+    func checkPhotos() {
+        dataManager.checkPhotos()
+    }
+    func setUpSubPublicationsView() {
         view = subPublicationsView
         subPublicationsView.mainCollectionView.delegate = dataManager
         subPublicationsView.mainCollectionView.dataSource = dataManager

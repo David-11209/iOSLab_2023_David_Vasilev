@@ -240,6 +240,12 @@ class ProfileView: UIView {
     func configUser(user: User) {
         accountsButton.setTitle(user.login, for: .normal)
         fullNameLabel.text = user.fullName
-        avatarImage.image = UIImage()
+        print(user.avatar)
+        if let imageData = user.avatar {
+            let image = UIImage(data: imageData)
+            avatarImage.image = image
+        } else {
+            avatarImage.image = UIImage()
+        }
     }
 }

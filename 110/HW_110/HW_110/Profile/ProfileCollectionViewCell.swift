@@ -27,6 +27,11 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         ])
     }
     func configure(with photo: Photo) {
-        cellImageView.image = UIImage()
+        if let imageData = photo.image {
+            let image = UIImage(data: imageData)
+            cellImageView.image = image
+        } else {
+            cellImageView.image = UIImage()
+        }
     }
 }

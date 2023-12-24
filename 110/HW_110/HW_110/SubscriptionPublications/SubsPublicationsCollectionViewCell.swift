@@ -194,13 +194,25 @@ class SubsPublicationsCollectionViewCell: UICollectionViewCell {
     func configure(with photo: Photo, count: Int) {
         currentPhoto = photo
         likeCount = count
-        mainImageView.image = UIImage()
-        avatarImageView.image = UIImage()
-//        accountNameLabel.text = photo.author
+        accountNameLabel.text = photo.user?.login
+        if let imageData = photo.image {
+            let image = UIImage(data: imageData)
+            mainImageView.image = image
+            avatarImageView.image = image
+        } else {
+            mainImageView.image = UIImage()
+            avatarImageView.image = UIImage()
+        }
 //        likeLabel.text = "Нравится: \(likeCount)"
 //        dateLabel.text = "\(photo.day) \(photo.month) \(photo.year).г"
-//        commentAccountNameLabel.text = photo.author
-//        commentLabel.text = photo.comment
+        commentAccountNameLabel.text = photo.user?.login
+        commentLabel.text = photo.comment
+        likeButton.setImage(.like, for: .normal)
+        let dateString =  "\(photo.date)"
+        if let index = dateString.firstIndex(of: " ") {
+            let formattedDate = dateString.prefix(upTo: index)
+            dateLabel.text = String(formattedDate)
+        }
 //        if photo.like {
 //            likeButton.setImage(.like, for: .normal)
 //        } else {

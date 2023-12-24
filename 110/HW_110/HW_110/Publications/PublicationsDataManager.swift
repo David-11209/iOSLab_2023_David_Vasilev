@@ -28,7 +28,7 @@ class PublicationsDataManager: NSObject, PublicationCollectionViewCellDelegate, 
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
-            sortedPublications = dataManager.photosProfile
+            sortedPublications = dataManager.photos
             updateUI()
         } else {
             Task {

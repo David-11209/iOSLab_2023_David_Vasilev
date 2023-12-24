@@ -2,7 +2,7 @@ import UIKit
 extension PublicationsDataManager: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if sortedPublications.isEmpty {
-            return dataManager.photosProfile.count
+            return dataManager.photos.count
         } else {
             return sortedPublications.count
         }
@@ -13,7 +13,7 @@ extension PublicationsDataManager: UICollectionViewDelegateFlowLayout, UICollect
     ) -> UICollectionViewCell {
         var photo: Photo
         if sortedPublications.isEmpty {
-            photo = dataManager.photosProfile[indexPath.row]
+            photo = dataManager.photos[indexPath.row]
         } else {
             photo = sortedPublications[indexPath.row]
         }

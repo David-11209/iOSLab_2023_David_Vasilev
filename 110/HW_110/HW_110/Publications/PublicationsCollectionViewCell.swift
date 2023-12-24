@@ -194,15 +194,27 @@ class PublicationCollectionViewCell: UICollectionViewCell {
     }
     func configure(with photo: Photo, count: Int) {
         likeCount = count
-//        currentPhoto = photo
-//        mainImageView.image = UIImage()
-//        accountNameLabel.text = photo.author
-//        avatarImageView.image = UIImage()
-//        likeLabel.text = "Нравится: \(likeCount)"
-//        dateLabel.text = "\(photo.day) \(photo.month) \(photo.year).г"
-//        commentAccountNameLabel.text =  photo.author
-//        commentLabel.text = photo.comment
-//        if photo.like {
+        currentPhoto = photo
+        accountNameLabel.text = photo.user?.login
+
+        if let imageData = photo.image {
+            let image = UIImage(data: imageData)
+            mainImageView.image = image
+            avatarImageView.image = image
+        } else {
+            mainImageView.image = UIImage()
+            avatarImageView.image = UIImage()
+        }
+        likeLabel.text = "Нравится: \(likeCount)"
+        let dateString =  "\(photo.date)"
+        if let index = dateString.firstIndex(of: " ") {
+            let formattedDate = dateString.prefix(upTo: index)
+            dateLabel.text = String(formattedDate)
+        }
+        commentAccountNameLabel.text =  photo.user?.login
+        commentLabel.text = photo.comment
+        likeButton.setImage(.like, for: .normal)
+//        if photo {
 //            likeButton.setImage(.like, for: .normal)
 //        } else {
 //            likeButton.setImage(.unlike, for: .normal)

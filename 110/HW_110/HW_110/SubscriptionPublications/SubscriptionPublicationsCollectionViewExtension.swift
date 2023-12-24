@@ -1,12 +1,12 @@
 import UIKit
 extension SubscriptionPublicationsDataManager: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataManager.photosSubscribers.count
+        return photos.count
     }
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            _ = dataManager.photosSubscribers[indexPath.row]
+            let photo = photosModels[indexPath.row]
             guard let cell = collectionView
                 .dequeueReusableCell(
                     withReuseIdentifier: SubsPublicationsCollectionViewCell.reuseIdentifier,
@@ -14,9 +14,10 @@ extension SubscriptionPublicationsDataManager: UICollectionViewDelegateFlowLayou
             else {
                 return UICollectionViewCell()
             }
+
 //            let count = dataManager.getCountLike(photoId: photo.id ?? "")
-//            cell.configure(with: photo, count: count)
-//            cell.delegate = self
+            cell.configure(with: photo, count: 0)
+            cell.delegate = self
             return cell
         }
     func collectionView(_ collectionView: UICollectionView, layout

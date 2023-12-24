@@ -49,16 +49,16 @@
 		2AB2AAEC2B2634030034DCC5 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AAEB2B2634030034DCC5 /* DataSource.swift */; };
 		2AB2AB012B2657AA0034DCC5 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB002B2657AA0034DCC5 /* RegistrationView.swift */; };
 		2AB2AB032B26580E0034DCC5 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB022B26580E0034DCC5 /* RegistrationViewController.swift */; };
-		2AB2AB0D2B265B9F0034DCC5 /* Like+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB052B265B9F0034DCC5 /* Like+CoreDataClass.swift */; };
-		2AB2AB0E2B265B9F0034DCC5 /* Like+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB062B265B9F0034DCC5 /* Like+CoreDataProperties.swift */; };
-		2AB2AB0F2B265B9F0034DCC5 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB072B265B9F0034DCC5 /* User+CoreDataClass.swift */; };
-		2AB2AB102B265B9F0034DCC5 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB082B265B9F0034DCC5 /* User+CoreDataProperties.swift */; };
-		2AB2AB112B265B9F0034DCC5 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB092B265B9F0034DCC5 /* Photo+CoreDataClass.swift */; };
-		2AB2AB122B265B9F0034DCC5 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB0A2B265B9F0034DCC5 /* Photo+CoreDataProperties.swift */; };
-		2AB2AB132B265B9F0034DCC5 /* Friend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB0B2B265B9F0034DCC5 /* Friend+CoreDataClass.swift */; };
-		2AB2AB142B265B9F0034DCC5 /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB0C2B265B9F0034DCC5 /* Friend+CoreDataProperties.swift */; };
 		2AB2AB172B265D700034DCC5 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB162B265D700034DCC5 /* StartScreenViewController.swift */; };
 		2AB2AB192B265D890034DCC5 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2AB182B265D890034DCC5 /* StartScreenView.swift */; };
+		2AFB051C2B29958400DCEF59 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB05162B29958400DCEF59 /* User+CoreDataClass.swift */; };
+		2AFB051D2B29958400DCEF59 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB05172B29958400DCEF59 /* User+CoreDataProperties.swift */; };
+		2AFB051E2B29958400DCEF59 /* Like+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB05182B29958400DCEF59 /* Like+CoreDataClass.swift */; };
+		2AFB051F2B29958400DCEF59 /* Like+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB05192B29958400DCEF59 /* Like+CoreDataProperties.swift */; };
+		2AFB05202B29958400DCEF59 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB051A2B29958400DCEF59 /* Photo+CoreDataClass.swift */; };
+		2AFB05212B29958400DCEF59 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB051B2B29958400DCEF59 /* Photo+CoreDataProperties.swift */; };
+		2AFB05232B29962700DCEF59 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB05222B29962700DCEF59 /* CoreDataManager.swift */; };
+		2AFB05252B2BB20F00DCEF59 /* AuthorizationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB05242B2BB20F00DCEF59 /* AuthorizationDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,16 +106,16 @@
 		2AB2AAEB2B2634030034DCC5 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		2AB2AB002B2657AA0034DCC5 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		2AB2AB022B26580E0034DCC5 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		2AB2AB052B265B9F0034DCC5 /* Like+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Like+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2AB2AB062B265B9F0034DCC5 /* Like+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Like+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2AB2AB072B265B9F0034DCC5 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2AB2AB082B265B9F0034DCC5 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2AB2AB092B265B9F0034DCC5 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2AB2AB0A2B265B9F0034DCC5 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2AB2AB0B2B265B9F0034DCC5 /* Friend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2AB2AB0C2B265B9F0034DCC5 /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2AB2AB162B265D700034DCC5 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		2AB2AB182B265D890034DCC5 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
+		2AFB05162B29958400DCEF59 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2AFB05172B29958400DCEF59 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2AFB05182B29958400DCEF59 /* Like+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Like+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2AFB05192B29958400DCEF59 /* Like+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Like+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2AFB051A2B29958400DCEF59 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2AFB051B2B29958400DCEF59 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2AFB05222B29962700DCEF59 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		2AFB05242B2BB20F00DCEF59 /* AuthorizationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +148,8 @@
 		2AB2AA802B2620E50034DCC5 /* HW_110 */ = {
 			isa = PBXGroup;
 			children = (
+				2AFB05152B2994F800DCEF59 /* Models */,
 				2AB2AB152B265D5A0034DCC5 /* StartScreen */,
-				2AB2AB042B265B840034DCC5 /* Models */,
 				2AB2AAED2B2635A30034DCC5 /* Registration */,
 				2AB2AABA2B2627320034DCC5 /* SubscriptionPublications */,
 				2AB2AAD72B262A560034DCC5 /* Friends */,
@@ -175,6 +175,7 @@
 			children = (
 				2AB2AA992B2622140034DCC5 /* AuthorizationView.swift */,
 				2AB2AA9B2B2622530034DCC5 /* AuthorizationViewController.swift */,
+				2AFB05242B2BB20F00DCEF59 /* AuthorizationDataManager.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -261,21 +262,6 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
-		2AB2AB042B265B840034DCC5 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2AB2AB052B265B9F0034DCC5 /* Like+CoreDataClass.swift */,
-				2AB2AB062B265B9F0034DCC5 /* Like+CoreDataProperties.swift */,
-				2AB2AB072B265B9F0034DCC5 /* User+CoreDataClass.swift */,
-				2AB2AB082B265B9F0034DCC5 /* User+CoreDataProperties.swift */,
-				2AB2AB092B265B9F0034DCC5 /* Photo+CoreDataClass.swift */,
-				2AB2AB0A2B265B9F0034DCC5 /* Photo+CoreDataProperties.swift */,
-				2AB2AB0B2B265B9F0034DCC5 /* Friend+CoreDataClass.swift */,
-				2AB2AB0C2B265B9F0034DCC5 /* Friend+CoreDataProperties.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		2AB2AB152B265D5A0034DCC5 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +269,20 @@
 				2AB2AB182B265D890034DCC5 /* StartScreenView.swift */,
 			);
 			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		2AFB05152B2994F800DCEF59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2AFB05162B29958400DCEF59 /* User+CoreDataClass.swift */,
+				2AFB05172B29958400DCEF59 /* User+CoreDataProperties.swift */,
+				2AFB05182B29958400DCEF59 /* Like+CoreDataClass.swift */,
+				2AFB05192B29958400DCEF59 /* Like+CoreDataProperties.swift */,
+				2AFB051A2B29958400DCEF59 /* Photo+CoreDataClass.swift */,
+				2AFB051B2B29958400DCEF59 /* Photo+CoreDataProperties.swift */,
+				2AFB05222B29962700DCEF59 /* CoreDataManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,7 +383,9 @@
 				2AB2AAEC2B2634030034DCC5 /* DataSource.swift in Sources */,
 				2AB2AABE2B2627A90034DCC5 /* SubscriptionPublicationsViewController.swift in Sources */,
 				2AB2AAA12B2623710034DCC5 /* ProfileView.swift in Sources */,
+				2AFB051D2B29958400DCEF59 /* User+CoreDataProperties.swift in Sources */,
 				2AB2AACB2B26294C0034DCC5 /* SettingsTableViewCell.swift in Sources */,
+				2AFB05202B29958400DCEF59 /* Photo+CoreDataClass.swift in Sources */,
 				2AB2AAB12B2626A90034DCC5 /* PublicationsView.swift in Sources */,
 				2AB2AAAD2B2626410034DCC5 /* DataManagerProtocol.swift in Sources */,
 				2AB2AAB32B2626C10034DCC5 /* PublicationsCollectionViewCell.swift in Sources */,
@@ -391,42 +393,40 @@
 				2AB2AAB52B2626D70034DCC5 /* PublicationsViewController.swift in Sources */,
 				2AB2AA9C2B2622530034DCC5 /* AuthorizationViewController.swift in Sources */,
 				2AB2AADD2B262AAD0034DCC5 /* FriendsDataManager.swift in Sources */,
-				2AB2AB0E2B265B9F0034DCC5 /* Like+CoreDataProperties.swift in Sources */,
 				2AB2AAC22B2628830034DCC5 /* SubsPublicationsCollectionViewCell.swift in Sources */,
 				2AB2AB172B265D700034DCC5 /* StartScreenViewController.swift in Sources */,
 				2AB2AAA32B26239D0034DCC5 /* ProfileDataManager.swift in Sources */,
-				2AB2AB112B265B9F0034DCC5 /* Photo+CoreDataClass.swift in Sources */,
 				2AB2AB032B26580E0034DCC5 /* RegistrationViewController.swift in Sources */,
 				2AB2AB192B265D890034DCC5 /* StartScreenView.swift in Sources */,
+				2AFB051F2B29958400DCEF59 /* Like+CoreDataProperties.swift in Sources */,
 				2AB2AADB2B262A930034DCC5 /* FriendsDataManagerExtension.swift in Sources */,
-				2AB2AB102B265B9F0034DCC5 /* User+CoreDataProperties.swift in Sources */,
-				2AB2AB132B265B9F0034DCC5 /* Friend+CoreDataClass.swift in Sources */,
 				2AB2AAA92B2625DF0034DCC5 /* CollectionViewCellExtension.swift in Sources */,
 				2AB2AAD62B262A240034DCC5 /* StoriesCollectionViewExtension.swift in Sources */,
+				2AFB051C2B29958400DCEF59 /* User+CoreDataClass.swift in Sources */,
 				2AB2AAAB2B2626100034DCC5 /* DataManagerProtocolExtension.swift in Sources */,
+				2AFB05252B2BB20F00DCEF59 /* AuthorizationDataManager.swift in Sources */,
 				2AB2AAA52B2623E70034DCC5 /* ProfileCollectionViewCell.swift in Sources */,
 				2AB2AA822B2620E50034DCC5 /* AppDelegate.swift in Sources */,
 				2AB2AAC42B2628AB0034DCC5 /* SubscriptionPublicationsCollectionViewExtension.swift in Sources */,
 				2AB2AAD42B262A030034DCC5 /* StoriesDataManager.swift in Sources */,
-				2AB2AB0F2B265B9F0034DCC5 /* User+CoreDataClass.swift in Sources */,
-				2AB2AB142B265B9F0034DCC5 /* Friend+CoreDataProperties.swift in Sources */,
 				2AB2AAC72B26290B0034DCC5 /* SettingsView.swift in Sources */,
+				2AFB05232B29962700DCEF59 /* CoreDataManager.swift in Sources */,
 				2AB2AA842B2620E50034DCC5 /* SceneDelegate.swift in Sources */,
 				2AB2AAD22B2629E70034DCC5 /* StoriesCollectionViewCell.swift in Sources */,
 				2AB2AA9F2B26234C0034DCC5 /* ProfileViewController.swift in Sources */,
-				2AB2AB122B265B9F0034DCC5 /* Photo+CoreDataProperties.swift in Sources */,
 				2AB2AAC02B2627D20034DCC5 /* SubscriptionPublicationsDataManager.swift in Sources */,
 				2AB2AABC2B2627600034DCC5 /* SubscriptionPublicationsView.swift in Sources */,
 				2AB2AAB92B26271D0034DCC5 /* PublicationsViewExtension.swift in Sources */,
 				2AB2AACF2B2629910034DCC5 /* SettingsDataManagerExtension.swift in Sources */,
 				2AB2AADF2B262AC80034DCC5 /* FriendsViewController.swift in Sources */,
-				2AB2AB0D2B265B9F0034DCC5 /* Like+CoreDataClass.swift in Sources */,
+				2AFB051E2B29958400DCEF59 /* Like+CoreDataClass.swift in Sources */,
 				2AB2AAA72B2625780034DCC5 /* ProfileCollectionViewExtension.swift in Sources */,
 				2AB2AA9A2B2622140034DCC5 /* AuthorizationView.swift in Sources */,
 				2AB2AAC92B2629330034DCC5 /* SettingsViewController.swift in Sources */,
 				2AB2AAB72B2626EB0034DCC5 /* PublicationsDataManager.swift in Sources */,
 				2AB2AAD92B262A6A0034DCC5 /* FriendsView.swift in Sources */,
 				2AB2AACD2B26296F0034DCC5 /* SettingsDataManager.swift in Sources */,
+				2AFB05212B29958400DCEF59 /* Photo+CoreDataProperties.swift in Sources */,
 				2AB2AA8C2B2620E50034DCC5 /* HW_110.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

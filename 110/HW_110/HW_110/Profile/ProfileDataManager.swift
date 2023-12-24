@@ -6,9 +6,11 @@ class ProfileDataManager: NSObject {
     typealias Model = Photo
     private let dataSource = DataSource()
     var user: User?
-    var photosProfile: [Photo] = []
+    var photos: [Photo] = []
+    var photosModels: [Photo] = []
     var photosSubscribers: [Photo] = []
     static let shared = ProfileDataManager()
+    let coreDataManager = CoreDataManager.shared
     weak var delegate: UpdateProfileDataManagerDelegate?
     let saveQueue = DispatchQueue(label: "saveQueue")
     let getModelsQueue = DispatchQueue(label: "getModelsQueue")
@@ -22,6 +24,9 @@ class ProfileDataManager: NSObject {
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    func setUser(user: User) {
+        self.user = user
     }
     func setPhotos(user: User) {
 //        self.user = user
@@ -78,26 +83,36 @@ class ProfileDataManager: NSObject {
 //        }
         return nil
     }
-    func setLikedPhotosInUserDefaults() {
-        do {
-            let encoder = JSONEncoder()
-            let likesCountData = try encoder.encode(likeCount)
-            userDefaults.setValue(likesCountData, forKey: "likesCountData")
-            userDefaults.set(true, forKey: "likes")
-        } catch {
-            print("Error encoding user data: \(error.localizedDescription)")
+//    func setLikedPhotosInUserDefaults() {
+//        do {
+//            let encoder = JSONEncoder()
+//            let likesCountData = try encoder.encode(likeCount)
+//            userDefaults.setValue(likesCountData, forKey: "likesCountData")
+//            userDefaults.set(true, forKey: "likes")
+//        } catch {
+//            print("Error encoding user data: \(error.localizedDescription)")
+//        }
+//    }
+//    func updateLikesFromUserDefaults() {
+//        if let likesCountData = userDefaults.data(forKey: "likesCountData") {
+//            do {
+//                let decoder = JSONDecoder()
+//                let likesCountDict = try decoder.decode([String: [String]].self, from: likesCountData)
+//                likeCount = likesCountDict
+//            } catch {
+//                print("Error decoding user data: \(error.localizedDescription)")
+//            }
+//        }
+//    }
+    func checkPhotos() {
+        if photos.isEmpty {
+            getPosts()
         }
     }
-    func updateLikesFromUserDefaults() {
-        if let likesCountData = userDefaults.data(forKey: "likesCountData") {
-            do {
-                let decoder = JSONDecoder()
-                let likesCountDict = try decoder.decode([String: [String]].self, from: likesCountData)
-                likeCount = likesCountDict
-            } catch {
-                print("Error decoding user data: \(error.localizedDescription)")
-            }
-        }
+    func getPosts() {
+        photosModels = coreDataManager.obtainUserPhotos(userId: user?.id)
+        var wqwer = coreDataManager.obtainSubsPhotos(userId: user?.id)
+        photos = photosModels
     }
     func getCountLike(photoId: String) -> Int {
         var count = 0
@@ -105,6 +120,18 @@ class ProfileDataManager: NSObject {
             count += 1
         }
         return count
+    }
+    func syncSave2() {
+//        var photo = Photo()
+//        photo.id = UUID()
+//        photo.comment = user?.login
+//        photo.image = user?.avatar
+//        photo.date = Date()
+//        photo.user = user
+         var photo = coreDataManager.createPhotoForUser(userId: user?.id)
+//        user?.addToPhotos(photo)
+        photos.append(photo)
+        updateUI()
     }
     func removeUserFromUserDefaults() {
         userDefaults.removeObject(forKey: "user")

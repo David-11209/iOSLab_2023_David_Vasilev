@@ -22,6 +22,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
           self.window = UIWindow(windowScene: windowScene)
           self.window?.rootViewController = navigationController
           self.window?.makeKeyAndVisible()
+            guard let windowScene = (scene as? UIWindowScene) else { return }
+                   self.window = UIWindow(windowScene: windowScene)
+
+                   let startScreenController = StartScreenViewController()
+                    let authorizationController = startScreenController.authorizationController
+                   if UserDefaults.standard.bool(forKey: "isUserLogged") {
+                       guard let userId = UserDefaults.standard.string(forKey: "loggedInUser") else {return}
+                       guard let user = CoreDataManager.shared.obtainAllUsers().first(where: {$0.id?.uuidString == userId}) else { return }
+                       authorizationController.setUpTabBar(user: user)
+                   } else {
+                       let navigationController = UINavigationController(rootViewController: startScreenController)
+                       navigationController.isNavigationBarHidden = true
+                       self.window?.rootViewController = navigationController
+                       self.window?.makeKeyAndVisible()
+                   }
       }
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -51,6 +66,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        CoreDataManager.shared.saveContext()
     }
 }

@@ -4,6 +4,7 @@ class AuthorizationView: UIView {
     lazy var loginTextField: UITextField = UITextField()
     lazy var passwordTextField: UITextField = UITextField()
     lazy var enterButton: UIButton = UIButton()
+    var enterButtonTapped: ((_ login: String, _ password: String) -> Void)?
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .black
@@ -38,6 +39,7 @@ class AuthorizationView: UIView {
         loginTextField.backgroundColor = .systemGray
         loginTextField.layer.cornerRadius = 8
         loginTextField.borderStyle = .roundedRect
+        loginTextField.isSecureTextEntry = false
         NSLayoutConstraint.activate([
             loginTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 400),
             loginTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
@@ -66,6 +68,9 @@ class AuthorizationView: UIView {
         enterButton.setTitle("Войти", for: .normal)
         enterButton.backgroundColor = .systemGray
         enterButton.layer.cornerRadius = 4
+        enterButton.addAction(UIAction(handler: { [weak self] _  in
+            self?.enterButtonTapped?(self?.loginTextField.text ?? "", self?.passwordTextField.text ?? "")
+        }), for: .touchUpInside)
         NSLayoutConstraint.activate([
             enterButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 10),
             enterButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),

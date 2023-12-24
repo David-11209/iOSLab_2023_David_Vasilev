@@ -7,40 +7,46 @@ extension ProfileDataManager: DataChangeProtocol {
         return [Photo()]
     }
     func syncSave(model photo: Photo) {
-        photosProfile.append(photo)
-        updateUI()
+//        photo.id = UUID()
+//        photo.comment = user?.login
+//        photo.image = user?.avatar
+        photo.date = Date()
+//        photo.user = user
+////        user?.addToPhotos(photo)
+//        photos.append(photo)
+//        updateUI()
     }
     func asyncSave(model photo: Photo) async {
         return await withCheckedContinuation { continuation in
             saveQueue.async {
-                self.photosProfile.append(photo)
+                self.photos.append(photo)
                 self.updateUI()
                 continuation.resume()
             }
         }
     }
     func syncGet() throws -> [Photo] {
-        return photosProfile
+        return photos
     }
     func asyncGet() async -> [Photo] {
         return await withCheckedContinuation { continuation in
             DispatchQueue.global().asyncAfter(deadline: .now()) {
-                continuation.resume(returning: self.photosProfile)
+                continuation.resume(returning: self.photos)
             }
         }
     }
     func syncDelete(model photo: Photo) throws {
-        if let index = photosProfile.firstIndex(where: { $0.id == photo.id }) {
-            photosProfile.remove(at: index)
+        if let index = photos.firstIndex(where: { $0.id == photo.id }) {
+            photos.remove(at: index)
         }
         self.updateUI()
     }
     func asyncDelete(model photo: Photo) async {
         await withCheckedContinuation { continuation in
             DispatchQueue.global().asyncAfter(deadline: .now()) {
-                if let index = self.photosProfile.firstIndex(where: { $0.id == photo.id }) {
-                    self.photosProfile.remove(at: index)
-                    print(self.photosProfile.count)
+                if let index = self.photos.firstIndex(where: { $0.id == photo.id }) {
+                    self.photos.remove(at: index)
+                    print(self.photos.count)
                 }
                 continuation.resume()
             }

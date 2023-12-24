@@ -20,7 +20,7 @@ extension ProfileDataManager: UICollectionViewDelegateFlowLayout, UICollectionVi
         else {
             return UICollectionViewCell()
         }
-        let photo = photosProfile[indexPath.row]
+        let photo = photos[indexPath.row]
         cell.configure(with: photo)
         return cell
     }
