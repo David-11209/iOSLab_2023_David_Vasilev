@@ -78,5 +78,4 @@ class AuthorizationViewController: UIViewController {
             sceneDelegate.window?.makeKeyAndVisible()
         }
     }
-    
 }

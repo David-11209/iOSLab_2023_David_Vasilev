@@ -14,9 +14,9 @@ class StartScreenViewController: UIViewController {
         startScreenView.registration.addTarget(self, action: #selector(registrationButtonTapped), for: .touchUpInside)
     }
     @objc func authorizationButtonTapped() {
-        navigationController?.pushViewController(authorizationController, animated: true)
+        self.navigationController?.pushViewController(authorizationController, animated: true)
     }
     @objc func registrationButtonTapped() {
-        navigationController?.pushViewController(registrationController, animated: true)
+        self.navigationController?.pushViewController(registrationController, animated: true)
     }
 }
