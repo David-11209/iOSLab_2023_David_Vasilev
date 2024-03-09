@@ -226,7 +226,6 @@ class GameView: UIView {
         delegate?.checkAliensKilled()
     }
     private func changesAfterAlienHitSpaceship(bullet: AlienBullet, alien: Alien) {
-        print("попал")
         heartImageViews[heartImageViews.count - 1].removeFromSuperview()
         heartImageViews.remove(at: heartImageViews.count - 1)
         bullet.removeFromSuperview()
