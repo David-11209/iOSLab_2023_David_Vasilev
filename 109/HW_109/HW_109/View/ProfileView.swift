@@ -39,7 +39,6 @@ class ProfileView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     @objc private func settingsButtonTapped() {
-        print("1")
         settingsButtonActionClosure?()
     }
     func setSettingsButtonActionClosure(_ closure: @escaping () -> Void) {

@@ -14,7 +14,6 @@ class PublicationsDataManager: NSObject, PublicationCollectionViewCellDelegate, 
     private override init() {
         super.init()
     }
-    /// не совсем понимаю что тут нужно сделать чтобы избавиться от предупрежедения
     func deleteItem(photo: Photo) async {
         Task {
             do {

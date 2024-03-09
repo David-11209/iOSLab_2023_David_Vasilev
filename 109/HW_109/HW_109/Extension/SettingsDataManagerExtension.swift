@@ -31,15 +31,14 @@ extension SettingsDataManager: UITableViewDelegate, UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
+        switch section {
+        case 0:
             return "Ваш аккаунт"
-        } else if section == 1 {
+        case 1:
             return "Как вы используете ваш Instagram"
-        } else if section == 2 {
+        case 2:
             return "Что видите вы"
-        } else if section == 3 {
-            return "Кто может видеть ваш контент"
-        } else {
+        default:
             return "Вход"
         }
     }
